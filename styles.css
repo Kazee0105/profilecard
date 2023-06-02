@@ -14,7 +14,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f4f4f4;
+    background-color: #b4bca7;
 }
 
 .profile-card{
@@ -27,6 +27,18 @@ body{
     border-radius: 24px;
     padding: 25px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.profile-card::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 36%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background-color: #c89970;
 }
 
 .image{
@@ -34,7 +46,7 @@ body{
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background-color: #4070f4;
+    background-color: #c89970;
     padding: 3px;
     margin-bottom: 10px;
 }
@@ -82,5 +94,51 @@ body{
     margin: 0 8px;
     background-color: #4070f4;
     text-decoration: none;
+}
 
+.profile-card .buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.buttons .button{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: #c89970;
+    cursor: pointer;
+    transition: all 0,3s ease;
+}
+
+.buttons .button:hover{
+    background-color: #0e4bf1;
+
+}
+
+.profile-card .analytics{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.analytics .data{
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 20px;
+    border-right: 2px solid #e7e7e7;
+}
+
+.data i{
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.data:last-child{
+    border-right: none;
 }
